@@ -49,7 +49,3 @@ Feel free to reach out:
 - 💼 LinkedIn: [linkedin.com/in/anil-bk](https://www.linkedin.com/in/anil-bk-bbb073295/)
 - 🐙 GitHub: [github.com/Anilbk777](https://github.com/Anilbk777)
 
-## 🌟 Credits
-
-Built with ❤️ by [Anil BK](https://anilbk.vercel.app/).  
-If you like it, feel free to ⭐ this repository and share!
