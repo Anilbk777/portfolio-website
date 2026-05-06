@@ -12,6 +12,97 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ── Scroll-triggered entrance animation ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+/* ── Staggered children delay ── */
+.animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
+.animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+.animate-fade-in-up.delay-300 { animation-delay: 0.3s; }
+.animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
+
+/* ── Section invisible state before animation ── */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* ── Animated gradient text ── */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-text-animate {
+  background: linear-gradient(270deg, #8245ec, #a855f7, #ec4899, #8245ec);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* ── Stat counter number animation ── */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.stat-animate {
+  animation: countUp 0.6s ease forwards;
+}
+
+/* ── Mobile menu slide down ── */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+.mobile-menu-enter {
+  animation: slideDown 0.25s ease forwards;
+}
+
+/* ── Glassmorphism card upgrade ── */
+.glass-card {
+  background: rgba(13, 8, 31, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(130, 69, 236, 0.2);
+  box-shadow:
+    0 0 20px rgba(130, 69, 236, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow:
+    0 0 30px rgba(130, 69, 236, 0.35),
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+}
+
 @layer utilities {
     .clip-path-custom {
       clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 0 100%);
