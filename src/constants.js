@@ -192,7 +192,7 @@ export const projects = [
       "CSS",
       "JavaScript",
     ],
-    github: "https://github.com/Anilbk777/ai-quiz-app",
+    github: "https://github.com/Anilbk777/AI_Quizzes_generator",
     webapp: "https://ai-quizzes-generator.vercel.app/",
   },
   {
@@ -202,7 +202,7 @@ export const projects = [
       "A fully functional, production-ready business website for a New Zealand-based care services company. Built with responsive, mobile-first UI components in React.js with smooth navigation and professional design, now live and actively serving real customers in New Zealand.",
     image: perfectCareLogo,
     tags: ["React.js", "HTML", "CSS", "JavaScript"],
-    github: "https://github.com/Anilbk777/perfectcare",
+    github: "https://github.com/Anilbk777/Perfect-Care-Lawn-Gardening",
     webapp: "https://www.perfectcare.co.nz/",
   },
   {
@@ -230,7 +230,8 @@ export const projects = [
       "ElasticNet",
       "Streamlit",
     ],
-    github: "https://github.com/Anilbk777/car-price-prediction",
+    github:
+      "https://github.com/Anilbk777/Machine-learning/tree/main/car_price_prediction",
     webapp: "https://machine-learning-ujzzbtckdlqlhrauovxnbh.streamlit.app/",
   },
 ];
