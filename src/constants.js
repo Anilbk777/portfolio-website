@@ -175,7 +175,7 @@ import aiQuizLogo from "./assets/work_logo/ai_quizz.png";
 import perfectCareLogo from "./assets/work_logo/perfect_Care.png";
 import movieRecLogo from "./assets/work_logo/movie_recommendation.png";
 import carPriceLogo from "./assets/work_logo/car_price_prediction.png";
-
+import nextGenPrepLogo from "./assets/work_logo/nextgen_prep.png"
 export const projects = [
   {
     id: 0,
@@ -191,6 +191,7 @@ export const projects = [
       "HTML",
       "CSS",
       "JavaScript",
+      "React.js"
     ],
     github: "https://github.com/Anilbk777/AI_Quizzes_generator",
     webapp: "https://ai-quizzes-generator.vercel.app/",
@@ -233,5 +234,25 @@ export const projects = [
     github:
       "https://github.com/Anilbk777/Machine-learning/tree/main/car_price_prediction",
     webapp: "https://machine-learning-ujzzbtckdlqlhrauovxnbh.streamlit.app/",
+  },
+  {
+    id: 4,
+    title: "NextGen Prep",
+    description:
+      "An AI-powered quiz generation platform that creates dynamic quizzes from user-provided topics or documents. Built with a scalable full-stack architecture using FastAPI backend and modern frontend technologies, featuring real-time quiz generation, REST APIs, and interactive learning experiences.",
+    image: nextGenPrepLogo,
+    tags: [
+      "Python",
+      "FastAPI",
+      "Pandas",
+      "React.Js",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "REST API",
+      "Gen AI",
+    ],
+    github: "https://github.com/Anilbk777/NextGen_Prep/tree/main",
+    webapp: "https://github.com/Anilbk777/NextGen_Prep/tree/main",
   },
 ];
