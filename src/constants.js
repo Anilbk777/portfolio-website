@@ -175,7 +175,8 @@ import aiQuizLogo from "./assets/work_logo/ai_quizz.png";
 import perfectCareLogo from "./assets/work_logo/perfect_Care.png";
 import movieRecLogo from "./assets/work_logo/movie_recommendation.png";
 import carPriceLogo from "./assets/work_logo/car_price_prediction.png";
-import nextGenPrepLogo from "./assets/work_logo/nextgen_prep.png"
+import nextGenPrepLogo from "./assets/work_logo/nextgen_prep.png";
+import parbatFurnitureLogo from "./assets/work_logo/parbat_furniture_udhyog.png";
 export const projects = [
   {
     id: 0,
@@ -219,6 +220,16 @@ export const projects = [
   },
   {
     id: 3,
+    title: "Parbat Furniture Udhyog – Furniture Business Website",
+    description:
+      "A production-ready website developed for Parbat Furniture Udhyog, a furniture manufacturing and retail business. Built with Python Django following the MVC pattern, featuring a fully responsive design, product showcase pages, service information, contact integration, and optimized user experience across all devices. The platform helps the business establish a professional online presence and connect with potential customers more effectively.",
+    image: parbatFurnitureLogo,
+    tags: ["Python", "Django", "HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Anilbk777/parbat-furniture-udhyog",
+    webapp: "https://parbat-furniture-udhyog.onrender.com/",
+  },
+  {
+    id: 4,
     title: "Ford Car Price Prediction App",
     description:
       "A machine learning regression app that predicts used Ford car prices based on key features. Built with Ridge, Lasso, and ElasticNet models with feature scaling and hyperparameter tuning, deployed as a real-time inference app using Streamlit.",
@@ -236,7 +247,7 @@ export const projects = [
     webapp: "https://machine-learning-ujzzbtckdlqlhrauovxnbh.streamlit.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "NextGen Prep",
     description:
       "An AI-powered quiz generation platform that creates dynamic quizzes from user-provided topics or documents. Built with a scalable full-stack architecture using FastAPI backend and modern frontend technologies, featuring real-time quiz generation, REST APIs, and interactive learning experiences.",
