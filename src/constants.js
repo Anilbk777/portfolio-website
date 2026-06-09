@@ -177,9 +177,32 @@ import movieRecLogo from "./assets/work_logo/movie_recommendation.png";
 import carPriceLogo from "./assets/work_logo/car_price_prediction.png";
 import nextGenPrepLogo from "./assets/work_logo/nextgen_prep.png";
 import parbatFurnitureLogo from "./assets/work_logo/parbat_furniture_udhyog.png";
+import docmindLogo from "./assets/work_logo/docmind.png";
+
 export const projects = [
   {
     id: 0,
+    title: "DocMind – Advanced AI Document Analysis & RAG Platform",
+    description:
+      "A sophisticated Retrieval-Augmented Generation (RAG) and conversational AI platform engineered for deep document intelligence. Features a high-performance, asynchronous FastAPI architecture backed by SQLAlchemy and Supabase. Implements an efficient database-driven sliding-window conversational memory to eliminate token bloat and protect server RAM, delivering real-time text streaming responses seamlessly accompanied by verifiable source citations via LangChain and Groq/Gemini APIs.",
+    image: docmindLogo,
+    tags: [
+      "Python",
+      "FastAPI",
+      "LangChain",
+      "PostgreSQL",
+      "Supabase",
+      "SQLAlchemy",
+      "Gemini API",
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript"
+    ],
+    github: "https://github.com/Anilbk777/DocMind",
+    webapp: "https://doc-mind-seven.vercel.app/login",
+  },
+  {
+    id: 1,
     title: "AI Quiz App – Intelligent Assessment Platform",
     description:
       "A comprehensive AI-powered quiz application that generates dynamic assessments from multiple document formats including PDFs, Word documents, and YouTube transcripts. Leverages LangChain and Groq/Gemini API models to create intelligent quizzes with real-time, context-aware responses for an interactive learning experience.",
@@ -198,7 +221,7 @@ export const projects = [
     webapp: "https://ai-quizzes-generator.vercel.app/",
   },
   {
-    id: 1,
+    id: 2,
     title: "PerfectCare NZ – Business Website",
     description:
       "A fully functional, production-ready business website for a New Zealand-based care services company. Built with responsive, mobile-first UI components in React.js with smooth navigation and professional design, now live and actively serving real customers in New Zealand.",
@@ -208,7 +231,7 @@ export const projects = [
     webapp: "https://www.perfectcare.co.nz/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Movie Recommendation System",
     description:
       "A collaborative filtering recommendation engine that suggests movies based on user preferences. Implements cosine similarity for personalized and accurate recommendations, backed by a full data preprocessing pipeline and deployed as an interactive Streamlit web app.",
@@ -219,7 +242,7 @@ export const projects = [
       "https://anilbk777-movie-recommendation-system-app-vvj9hk.streamlit.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Parbat Furniture Udhyog – Furniture Business Website",
     description:
       "A production-ready website developed for Parbat Furniture Udhyog, a furniture manufacturing and retail business. Built with Python Django following the MVC pattern, featuring a fully responsive design, product showcase pages, service information, contact integration, and optimized user experience across all devices. The platform helps the business establish a professional online presence and connect with potential customers more effectively.",
@@ -229,7 +252,7 @@ export const projects = [
     webapp: "https://parbat-furniture-udhyog.onrender.com/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Ford Car Price Prediction App",
     description:
       "A machine learning regression app that predicts used Ford car prices based on key features. Built with Ridge, Lasso, and ElasticNet models with feature scaling and hyperparameter tuning, deployed as a real-time inference app using Streamlit.",
@@ -247,7 +270,7 @@ export const projects = [
     webapp: "https://machine-learning-ujzzbtckdlqlhrauovxnbh.streamlit.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "NextGen Prep",
     description:
       "An AI-powered quiz generation platform that creates dynamic quizzes from user-provided topics or documents. Built with a scalable full-stack architecture using FastAPI backend and modern frontend technologies, featuring real-time quiz generation, REST APIs, and interactive learning experiences.",
