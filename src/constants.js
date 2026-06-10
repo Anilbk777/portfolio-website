@@ -178,7 +178,7 @@ import carPriceLogo from "./assets/work_logo/car_price_prediction.png";
 import nextGenPrepLogo from "./assets/work_logo/nextgen_prep.png";
 import parbatFurnitureLogo from "./assets/work_logo/parbat_furniture_udhyog.png";
 import docmindLogo from "./assets/work_logo/docmind.png";
-
+import hisabKitabLogo from "./assets/work_logo/hiab_kitab.png";
 export const projects = [
   {
     id: 0,
@@ -203,6 +203,26 @@ export const projects = [
   },
   {
     id: 1,
+    title: "Hisab Kitab – Personal Finance Ledger",
+    description:
+      "A mobile-first Progressive Web App (PWA) built to digitize the traditional Nepali bahi-khata bookkeeping system for small business owners. Engineered with a layered FastAPI architecture (API → Service → Repository) enforcing strict separation of concerns, backed by SQLAlchemy ORM and Supabase PostgreSQL. Implements domain-driven design with custom exception hierarchies and centralized error handling for production-grade reliability. Models the familiar 'one page per person' notebook format as individual Khatas with automatic Jamma/Udhar balance computation, eliminating 20–30 minutes of nightly manual entry down to under 5 minutes.",
+    image: hisabKitabLogo,
+    tags: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "Supabase",
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "PWA",
+    ],
+    github: "https://github.com/Anilbk777/hisab_kitab.git",
+    webapp: "https://hisab-kitab-wheat.vercel.app/login",
+  },
+  {
+    id: 2,
     title: "AI Quiz App – Intelligent Assessment Platform",
     description:
       "A comprehensive AI-powered quiz application that generates dynamic assessments from multiple document formats including PDFs, Word documents, and YouTube transcripts. Leverages LangChain and Groq/Gemini API models to create intelligent quizzes with real-time, context-aware responses for an interactive learning experience.",
@@ -221,7 +241,7 @@ export const projects = [
     webapp: "https://ai-quizzes-generator.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "PerfectCare NZ – Business Website",
     description:
       "A fully functional, production-ready business website for a New Zealand-based care services company. Built with responsive, mobile-first UI components in React.js with smooth navigation and professional design, now live and actively serving real customers in New Zealand.",
@@ -231,7 +251,7 @@ export const projects = [
     webapp: "https://www.perfectcare.co.nz/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Movie Recommendation System",
     description:
       "A collaborative filtering recommendation engine that suggests movies based on user preferences. Implements cosine similarity for personalized and accurate recommendations, backed by a full data preprocessing pipeline and deployed as an interactive Streamlit web app.",
@@ -242,7 +262,7 @@ export const projects = [
       "https://anilbk777-movie-recommendation-system-app-vvj9hk.streamlit.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Parbat Furniture Udhyog – Furniture Business Website",
     description:
       "A production-ready website developed for Parbat Furniture Udhyog, a furniture manufacturing and retail business. Built with Python Django following the MVC pattern, featuring a fully responsive design, product showcase pages, service information, contact integration, and optimized user experience across all devices. The platform helps the business establish a professional online presence and connect with potential customers more effectively.",
@@ -252,7 +272,7 @@ export const projects = [
     webapp: "https://parbat-furniture-udhyog.onrender.com/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Ford Car Price Prediction App",
     description:
       "A machine learning regression app that predicts used Ford car prices based on key features. Built with Ridge, Lasso, and ElasticNet models with feature scaling and hyperparameter tuning, deployed as a real-time inference app using Streamlit.",
@@ -270,7 +290,7 @@ export const projects = [
     webapp: "https://machine-learning-ujzzbtckdlqlhrauovxnbh.streamlit.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "NextGen Prep",
     description:
       "An AI-powered quiz generation platform that creates dynamic quizzes from user-provided topics or documents. Built with a scalable full-stack architecture using FastAPI backend and modern frontend technologies, featuring real-time quiz generation, REST APIs, and interactive learning experiences.",

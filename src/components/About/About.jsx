@@ -23,9 +23,8 @@ const StatCounter = ({ target, suffix, label, delay }) => {
   return (
     <div
       ref={ref}
-      className={`flex flex-col items-center px-6 py-4 rounded-2xl transition-all duration-700 ${
-        isVisible ? "stat-animate opacity-100" : "opacity-0"
-      }`}
+      className={`flex flex-col items-center px-6 py-4 rounded-2xl transition-all duration-700 ${isVisible ? "stat-animate opacity-100" : "opacity-0"
+        }`}
       style={{
         background: "rgba(130,69,236,0.08)",
         border: "1px solid rgba(130,69,236,0.2)",
@@ -74,11 +73,11 @@ const ProfileCard = () => {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
   const badges = [
-    { label: "Python",    emoji: "🐍", style: { top: "-14px",  left: "10%",   dur: 3.2, delay: 0   } },
-    { label: "React",     emoji: "⚛️",  style: { top: "15%",   right: "-16px", dur: 2.8, delay: 0.4 } },
-    { label: "FastAPI",   emoji: "⚡",  style: { bottom: "25%", right: "-20px", dur: 3.5, delay: 0.2 } },
-    { label: "AI/ML",     emoji: "🤖",  style: { bottom: "-14px", left: "15%", dur: 3.0, delay: 0.6 } },
-    { label: "LangChain", emoji: "🔗",  style: { top: "40%",   left: "-22px",  dur: 2.6, delay: 0.3 } },
+    { label: "Python", emoji: "🐍", style: { top: "-14px", left: "10%", dur: 3.2, delay: 0 } },
+    { label: "React", emoji: "⚛️", style: { top: "15%", right: "-16px", dur: 2.8, delay: 0.4 } },
+    { label: "FastAPI", emoji: "⚡", style: { bottom: "25%", right: "-20px", dur: 3.5, delay: 0.2 } },
+    { label: "AI/ML", emoji: "🤖", style: { bottom: "-14px", left: "15%", dur: 3.0, delay: 0.6 } },
+    { label: "LangChain", emoji: "🔗", style: { top: "40%", left: "-22px", dur: 2.6, delay: 0.3 } },
   ];
 
   return (
@@ -101,9 +100,8 @@ const ProfileCard = () => {
 
       <div
         ref={ref}
-        className={`relative flex justify-center md:justify-end transition-all duration-1000 ${
-          isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
-        }`}
+        className={`relative flex justify-center md:justify-end transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
+          }`}
       >
         {/* Outer wrapper — provides space for badges */}
         <div className="relative mt-8 md:mt-0" style={{ width: "300px", height: "360px" }}>
@@ -183,9 +181,9 @@ const About = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation(0.1);
 
   const stats = [
-    { target: 1,  suffix: "+", label: "Year Experience", delay: "0s"    },
-    { target: 4,  suffix: "+", label: "Projects Built",  delay: "0.15s" },
-    { target: 10, suffix: "+", label: "Technologies",    delay: "0.3s"  },
+    { target: 1, suffix: "+", label: "Year Experience", delay: "0s" },
+    { target: 4, suffix: "+", label: "Projects Built", delay: "0.15s" },
+    { target: 10, suffix: "+", label: "Technologies", delay: "0.3s" },
   ];
 
   return (
@@ -197,9 +195,8 @@ const About = () => {
         {/* ── Left: Text Content ── */}
         <div
           ref={heroRef}
-          className={`md:w-1/2 text-center md:text-left transition-all duration-700 ${
-            heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`md:w-1/2 text-center md:text-left transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
             Hi, I am
@@ -231,7 +228,7 @@ const About = () => {
             deploying production-ready systems that solve real-world problems.
           </p>
           <a
-            href="https://drive.google.com/file/d/1K-oL6RjEHB-94BdObka4PwHX8RVxKdFC/view?usp=sharing"
+            href="https://drive.google.com/file/d/1NQrPHqm7pekHJQglzwyxXFBLcmG5vJwH/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition-all duration-300 hover:scale-105 hover:brightness-110"
