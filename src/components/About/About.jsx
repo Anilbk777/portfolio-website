@@ -221,11 +221,14 @@ const About = () => {
             />
           </h3>
           <p className="text-base sm:text-lg text-gray-400 mb-8 mt-6 leading-relaxed">
-            I am an AI/ML Engineer and Software Engineering graduate with
-            hands-on experience building LLM-powered applications, RAG
-            pipelines, and full-stack backends. Skilled in Python, FastAPI, and
-            LangChain, I specialize in integrating cutting-edge AI APIs and
-            deploying production-ready systems that solve real-world problems.
+            I am a Software Engineer & AI Engineer who designs and builds reliable, scalable systems with a strong focus on clean architecture. My core expertise is in Python,
+            JavaScript, FastAPI, Node.js, and Express.js, where I create secure REST
+            APIs, well-structured databases, and permission-based access systems. I
+            think carefully about system design and software architecture so that
+            what I build stays maintainable as it grows. I also bring AI into my
+            backends with LangChain and RAG, turning LLMs into practical, dependable
+            features. I enjoy solving complex problems and writing code that is simple
+            to understand and built to last.
           </p>
           <a
             href="https://drive.google.com/file/d/1NQrPHqm7pekHJQglzwyxXFBLcmG5vJwH/view?usp=sharing"
