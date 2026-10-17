@@ -16,6 +16,7 @@ import nodejsLogo from "./assets/tech_logo/nodejs.png";
 import expressjsLogo from "./assets/tech_logo/express.png";
 import mysqlLogo from "./assets/tech_logo/mysql.png";
 import mongodbLogo from "./assets/tech_logo/mongodb.png";
+import redisLogo from "./assets/tech_logo/redis.png";
 import firebaseLogo from "./assets/tech_logo/firebase.png";
 import cLogo from "./assets/tech_logo/c.png";
 import cppLogo from "./assets/tech_logo/cpp.png";
@@ -46,22 +47,12 @@ import webverseLogo from "./assets/company_logo/webverse_logo.png";
 import agcLogo from "./assets/company_logo/agc_logo.png";
 import newtonschoolLogo from "./assets/company_logo/newtonschool_logo.png";
 import brandBuilderLogo from "./assets/company_logo/brandbuilder.png";
+import pravidhiLogo from "./assets/company_logo/pravdhi-logo.png";
 
 // Education Section Logo's
 import glaLogo from "./assets/education_logo/gla_logo.png";
 import bsaLogo from "./assets/education_logo/bsa_logo.png";
 import vpsLogo from "./assets/education_logo/vps_logo.png";
-
-// Project Section Logo's
-import githubdetLogo from "./assets/work_logo/github_det.png";
-import csprepLogo from "./assets/work_logo/cs_prep.png";
-import movierecLogo from "./assets/work_logo/movie_rec.png";
-import taskremLogo from "./assets/work_logo/task_rem.png";
-import npmLogo from "./assets/work_logo/npm.png";
-import webverLogo from "./assets/work_logo/web_dig.png";
-import cmLogo from "./assets/work_logo/cm.png";
-import imagesearchLogo from "./assets/work_logo/image_search.png";
-import removebgLogo from "./assets/work_logo/remove_bg.png";
 
 export const SkillsInfo = [
   {
@@ -80,7 +71,11 @@ export const SkillsInfo = [
   {
     title: "Backend",
     skills: [
+      { name: "Node.js", logo: nodejsLogo },
+      { name: "Express", logo: expressjsLogo },
       { name: "MySQL", logo: mysqlLogo },
+      { name: "MongoDB", logo: mongodbLogo },
+      { name: "Redis", logo: redisLogo },
       { name: "Firebase", logo: firebaseLogo },
       { name: "PostgreSQL", logo: postgreLogo },
       { name: "FastAPI", logo: fastAPILogo },
@@ -115,10 +110,44 @@ export const SkillsInfo = [
     ],
   },
 ];
-
 export const experiences = [
   {
     id: 0,
+    img: pravidhiLogo,
+    role: "Backend Developer",
+    company: "Pravidhi Digital Innovation Nepal Pvt. Ltd.",
+    date: "Oct 2026 - Present",
+    desc: "Design and ship production-grade backends for real-world client products. Built ServeIQ, a restaurant management system with POS, inventory, multi-outlet management, reservations, restaurant layout and menu management, and StayEasy, a booking platform with guest bookings, a property-owner portal and a permission-based role system for managers, front desk, housekeeping and maintenance staff.",
+    skills: [
+      "REST APIs",
+      "Database Design",
+      "Role-Based Access Control",
+      "System Design",
+      "POS Systems",
+      "Multi-Tenant Architecture",
+      "MERN Stack"
+    ],
+  },
+  {
+    id: 1,
+    img: pravidhiLogo,
+    role: "Backend Engineer Intern",
+    company: "Pravidhi Digital Innovation Nepal Pvt. Ltd.",
+    date: "Jun 2026 - Sep 2026",
+    desc: "Completed a 3-month internship contributing backend features to live projects, working alongside the engineering team on real client requirements before transitioning into a full-time Backend Developer role.",
+    skills: [
+      "REST APIs",
+      "Backend Development",
+      "Database Design",
+      "Git",
+      "FastAPI",
+      "Multi-Tenant Architecture",
+      "PostgreSQL",
+      "Render"
+    ],
+  },
+  {
+    id: 2,
     img: brandBuilderLogo,
     role: "Backend Engineer Intern",
     company: "BrandBuilder",
@@ -147,7 +176,7 @@ export const education = [
     school:
       "Gandaki College of Engineering and Science (GCES), Pokhara University",
     date: "2021 - 2025",
-    grade: "3.5 GPA",
+    grade: "3.04 GPA",
     desc: "I completed my Bachelor's degree in Software Engineering from Gandaki College of Engineering and Science (GCES), affiliated with Pokhara University. During my studies, I built a strong foundation in software architecture, data structures, algorithms, and AI/ML. I worked on multiple real-world projects including LLM-powered applications, RAG pipelines, and full-stack deployments, applying academic knowledge to solve practical problems.",
     degree: "Bachelor of Software Engineering",
   },
@@ -179,9 +208,49 @@ import nextGenPrepLogo from "./assets/work_logo/nextgen_prep.png";
 import parbatFurnitureLogo from "./assets/work_logo/parbat_furniture_udhyog.png";
 import docmindLogo from "./assets/work_logo/docmind.png";
 import hisabKitabLogo from "./assets/work_logo/hiab_kitab.png";
+import serveIQLogo from "./assets/work_logo/serveiq.png";
+import stayEasyLogo from "./assets/work_logo/stay-easy.png";
+
 export const projects = [
   {
     id: 0,
+    title: "ServeIQ – Restaurant Management System",
+    description:
+      "An all-in-one restaurant management platform built to run day-to-day operations from a single system. Includes a Point of Sale (POS) for order taking and billing, inventory management to track stock levels, and menu management to control items, categories, and pricing. Supports multi-outlet management so owners can operate several branches from one place, along with table reservations and a restaurant layout designer to model floor plans and manage seating.",
+    image: serveIQLogo,
+    tags: [
+      "REST API",
+      "POS",
+      "Inventory Management",
+      "Multi-Outlet",
+      "Reservations",
+      "Menu Management",
+      "Nodejs",
+      "Expressjs"
+    ],
+    github: "",
+    webapp: "https://pravidhipos.vercel.app/login",
+  },
+  {
+    id: 1,
+    title: "StayEasy – Booking Management Platform",
+    description:
+      "A booking management platform that connects guests and property owners. Guests can search and book stays, while property owners get a dedicated portal to list, manage, and monitor their properties. Features a permission-based access system with distinct staff roles (manager, front desk, housekeeping, and maintenance), so each team member sees and does only what their role allows.",
+    image: stayEasyLogo,
+    tags: [
+      "REST API",
+      "Booking System",
+      "Role-Based Access Control",
+      "Permissions",
+      "Property Management",
+      "FastAPI",
+    ],
+    github: "https://github.com/anilghatan6/Stay-Easy",
+    webapp: "https://stay-easy-nu.vercel.app/",
+  },
+  {
+
+    id: 2,
     title: "DocMind – Advanced AI Document Analysis & RAG Platform",
     description:
       "A sophisticated Retrieval-Augmented Generation (RAG) and conversational AI platform engineered for deep document intelligence. Features a high-performance, asynchronous FastAPI architecture backed by SQLAlchemy and Supabase. Implements an efficient database-driven sliding-window conversational memory to eliminate token bloat and protect server RAM, delivering real-time text streaming responses seamlessly accompanied by verifiable source citations via LangChain and Groq/Gemini APIs.",
@@ -201,45 +270,7 @@ export const projects = [
     github: "https://github.com/Anilbk777/DocMind",
     webapp: "https://doc-mind-seven.vercel.app/login",
   },
-  {
-    id: 1,
-    title: "Hisab Kitab – Personal Finance Ledger",
-    description:
-      "A mobile-first Progressive Web App (PWA) built to digitize the traditional Nepali bahi-khata bookkeeping system for small business owners. Engineered with a layered FastAPI architecture (API → Service → Repository) enforcing strict separation of concerns, backed by SQLAlchemy ORM and Supabase PostgreSQL. Implements domain-driven design with custom exception hierarchies and centralized error handling for production-grade reliability. Models the familiar 'one page per person' notebook format as individual Khatas with automatic Jamma/Udhar balance computation, eliminating 20–30 minutes of nightly manual entry down to under 5 minutes.",
-    image: hisabKitabLogo,
-    tags: [
-      "Python",
-      "FastAPI",
-      "SQLAlchemy",
-      "PostgreSQL",
-      "Supabase",
-      "React.js",
-      "Tailwind CSS",
-      "JavaScript",
-      "PWA",
-    ],
-    github: "https://github.com/Anilbk777/hisab_kitab.git",
-    webapp: "https://hisab-kitab-wheat.vercel.app/login",
-  },
-  {
-    id: 2,
-    title: "AI Quiz App – Intelligent Assessment Platform",
-    description:
-      "A comprehensive AI-powered quiz application that generates dynamic assessments from multiple document formats including PDFs, Word documents, and YouTube transcripts. Leverages LangChain and Groq/Gemini API models to create intelligent quizzes with real-time, context-aware responses for an interactive learning experience.",
-    image: aiQuizLogo,
-    tags: [
-      "Python",
-      "FastAPI",
-      "LangChain",
-      "Gemini API",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React.js"
-    ],
-    github: "https://github.com/Anilbk777/AI_Quizzes_generator",
-    webapp: "https://ai-quizzes-generator.vercel.app/",
-  },
+
   {
     id: 3,
     title: "PerfectCare NZ – Business Website",
@@ -308,5 +339,44 @@ export const projects = [
     ],
     github: "https://github.com/Anilbk777/NextGen_Prep/tree/main",
     webapp: "https://github.com/Anilbk777/NextGen_Prep/tree/main",
+  },
+  {
+    id: 8,
+    title: "Hisab Kitab – Personal Finance Ledger",
+    description:
+      "A mobile-first Progressive Web App (PWA) built to digitize the traditional Nepali bahi-khata bookkeeping system for small business owners. Engineered with a layered FastAPI architecture (API → Service → Repository) enforcing strict separation of concerns, backed by SQLAlchemy ORM and Supabase PostgreSQL. Implements domain-driven design with custom exception hierarchies and centralized error handling for production-grade reliability. Models the familiar 'one page per person' notebook format as individual Khatas with automatic Jamma/Udhar balance computation, eliminating 20–30 minutes of nightly manual entry down to under 5 minutes.",
+    image: hisabKitabLogo,
+    tags: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "Supabase",
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "PWA",
+    ],
+    github: "https://github.com/Anilbk777/hisab_kitab.git",
+    webapp: "https://hisab-kitab-wheat.vercel.app/login",
+  },
+  {
+    id: 9,
+    title: "AI Quiz App – Intelligent Assessment Platform",
+    description:
+      "A comprehensive AI-powered quiz application that generates dynamic assessments from multiple document formats including PDFs, Word documents, and YouTube transcripts. Leverages LangChain and Groq/Gemini API models to create intelligent quizzes with real-time, context-aware responses for an interactive learning experience.",
+    image: aiQuizLogo,
+    tags: [
+      "Python",
+      "FastAPI",
+      "LangChain",
+      "Gemini API",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js"
+    ],
+    github: "https://github.com/Anilbk777/AI_Quizzes_generator",
+    webapp: "https://ai-quizzes-generator.vercel.app/",
   },
 ];
