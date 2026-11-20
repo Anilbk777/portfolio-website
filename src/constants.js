@@ -196,7 +196,7 @@ export const education = [
     date: "2018",
     grade: "3.6 GPA",
     desc: "I completed my SEE (Secondary Education Examination / Class 10) from Samata Shiksha Niketan, where I studied core subjects along with Basic Computer as an additional subject. This early exposure to computers sparked my interest in technology and programming.",
-    degree: "SEE (Class 10) - Science with Basic Computer",
+    degree: "SEE (Class 10)",
   },
 ];
 
