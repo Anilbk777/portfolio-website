@@ -1,38 +1,83 @@
 import React, { useState, useEffect } from "react";
 import ReactTypingEffect from "react-typing-effect";
+import PropTypes from "prop-types";
+import { FiBriefcase, FiUsers, FiCheckCircle } from "react-icons/fi";
 import profileImage from "../../assets/profile2.jpg";
 import useScrollAnimation from "../../hooks/useScrollAnimation";
 
 /* ── Animated stat counter ── */
-const StatCounter = ({ target, suffix, label, delay }) => {
+const StatCounter = ({ target, suffix, label, Icon, delay }) => {
   const [count, setCount] = useState(0);
   const { ref, isVisible } = useScrollAnimation(0.3);
 
   useEffect(() => {
     if (!isVisible) return;
-    let start = 0;
-    const stepTime = Math.max(Math.floor(1200 / target), 20);
-    const timer = setInterval(() => {
-      start += 1;
-      setCount(start);
-      if (start >= target) clearInterval(timer);
-    }, stepTime);
-    return () => clearInterval(timer);
+    const duration = 1400;
+    const start = performance.now();
+    let frame;
+
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(eased * target));
+      if (progress < 1) frame = requestAnimationFrame(tick);
+    };
+
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
   }, [isVisible, target]);
 
   return (
     <div
       ref={ref}
-      className={`flex flex-col items-center px-6 py-4 rounded-2xl transition-all duration-700 ${isVisible ? "stat-animate opacity-100" : "opacity-0"
-        }`}
+      className={`group relative overflow-hidden rounded-2xl px-6 py-6 flex flex-col items-center text-center transition-all duration-700 ease-out hover:-translate-y-1.5 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
       style={{
-        background: "rgba(130,69,236,0.08)",
-        border: "1px solid rgba(130,69,236,0.2)",
-        animationDelay: delay,
+        background: "rgba(13,8,31,0.6)",
+        border: "1px solid rgba(130,69,236,0.22)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        boxShadow:
+          "0 0 22px rgba(130,69,236,0.12), 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.05)",
+        transitionDelay: `${delay}ms`,
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow =
+          "0 0 34px rgba(168,85,247,0.38), 0 14px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.08)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow =
+          "0 0 22px rgba(130,69,236,0.12), 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.05)";
       }}
     >
+      {/* Gradient accent line */}
       <span
-        className="text-3xl md:text-4xl font-bold"
+        className="absolute top-0 left-0 h-[2px] w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+        style={{
+          background: "linear-gradient(90deg, transparent, #8245ec, #ec4899, transparent)",
+        }}
+      />
+      {/* Soft corner glow */}
+      <span
+        className="absolute -top-10 -right-10 w-24 h-24 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, rgba(168,85,247,0.35), transparent 70%)",
+        }}
+      />
+
+      <div
+        className="flex items-center justify-center w-11 h-11 rounded-xl mb-4 text-white text-xl shadow-lg transition-transform duration-300 group-hover:scale-110"
+        style={{
+          background: "linear-gradient(135deg, #8245ec, #a855f7, #ec4899)",
+          boxShadow: "0 0 18px rgba(130,69,236,0.45)",
+        }}
+      >
+        <Icon />
+      </div>
+
+      <span
+        className="text-3xl md:text-4xl font-bold leading-none"
         style={{
           background: "linear-gradient(135deg, #8245ec, #a855f7, #ec4899)",
           WebkitBackgroundClip: "text",
@@ -43,11 +88,24 @@ const StatCounter = ({ target, suffix, label, delay }) => {
         {isVisible ? count : 0}
         {suffix}
       </span>
-      <span className="text-gray-400 text-sm mt-1 text-center font-medium">
+      <span className="text-gray-400 text-xs sm:text-sm mt-2 font-medium tracking-wide">
         {label}
       </span>
     </div>
   );
+};
+
+StatCounter.propTypes = {
+  target: PropTypes.number.isRequired,
+  suffix: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  Icon: PropTypes.elementType.isRequired,
+  delay: PropTypes.number,
+};
+
+StatCounter.defaultProps = {
+  suffix: "",
+  delay: 0,
 };
 
 /* ── Floating tech badge ── */
@@ -181,9 +239,9 @@ const About = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation(0.1);
 
   const stats = [
-    { target: 1, suffix: "+", label: "Year Experience", delay: "0s" },
-    { target: 4, suffix: "+", label: "Projects Built", delay: "0.15s" },
-    { target: 10, suffix: "+", label: "Technologies", delay: "0.3s" },
+    { target: 1, suffix: "+", label: "Year Experience", Icon: FiBriefcase, delay: 0 },
+    { target: 2, suffix: "+", label: "Happy Clients", Icon: FiUsers, delay: 150 },
+    { target: 3, suffix: "+", label: "Projects Completed", Icon: FiCheckCircle, delay: 300 },
   ];
 
   return (
@@ -251,11 +309,20 @@ const About = () => {
       </div>
 
       {/* ── Animated Stat Counters ── */}
-      {/* <div className="grid grid-cols-3 gap-4 mt-16 md:mt-20">
-        {stats.map((s) => (
-          <StatCounter key={s.label} {...s} />
-        ))}
-      </div> */}
+      <div className="max-w-4xl mx-auto mt-16 md:mt-20">
+        <div
+          className="h-px w-full mb-10"
+          style={{
+            background:
+              "linear-gradient(90deg, transparent, rgba(130,69,236,0.5), rgba(236,72,153,0.4), transparent)",
+          }}
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
+          {stats.map((s) => (
+            <StatCounter key={s.label} {...s} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
